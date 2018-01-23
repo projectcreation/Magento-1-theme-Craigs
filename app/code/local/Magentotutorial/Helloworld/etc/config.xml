@@ -1,0 +1,26 @@
+<config>
+
+    <modules>
+        <!--Magentotutorial - name space-->
+        <Magentotutorial_Helloworld>
+            <!--Helloworld - module name-->
+            <version>0.1.0</version>
+        </Magentotutorial_Helloworld>
+    </modules>
+
+
+    <frontend>
+        <routers>
+            <!--module name-->
+            <helloworld>
+            <!--module name-->
+                <use>standard</use>
+                <args>
+                    <module>Magentotutorial_Helloworld</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </helloworld>
+        </routers>
+    </frontend>
+
+</config>

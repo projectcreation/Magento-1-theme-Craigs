@@ -1,0 +1,99 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2017 X.commerce, Inc. and affiliates (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+
+<section class="block">
+    <div class="container">
+        <div class="box has-dark-background">
+            <div class="row align-items-center justify-content-center d-flex">
+                <div class="col-md-10 py-5">
+                    <h2><?php echo $this->__('Get the Latest Ads in Your Inbox') ?></h2>
+                    <form class="form email" action="<?php echo $this->getFormActionUrl() ?>" method="post" id="newsletter-validate-detail">
+                        <div class="form-row">
+                            <div class="col-md-4 col-sm-4">
+                                <div class="form-group">
+                                    <label for="newsletter_category" class="col-form-label"><?php echo $this->__('Category?') ?></label>
+                                    <select name="newsletter_category" id="newsletter_category" data-placeholder="Select Category" data-disable-search="true">
+                                        <option value="">Select Category</option>
+                                        <option value="1">Computers</option>
+                                        <option value="2">Real Estate</option>
+                                        <option value="3">Cars & Motorcycles</option>
+                                        <option value="4">Furniture</option>
+                                        <option value="5">Pets & Animals</option>
+                                    </select>
+                                </div>
+                                <!--end form-group-->
+                            </div>
+                            <!--end col-md-4-->
+                            <div class="col-md-7 col-sm-7">
+                                <div class="form-group">
+                                    <label for="newsletter_email" class="col-form-label">Your Email</label>
+                                    <input type="text"
+                                           name="email"
+                                           id="newsletter"
+                                           title="<?php echo $this->__('Sign up for our newsletter') ?>"
+                                           placeholder="You e-mail"
+                                           class="form-control required-entry validate-email" />
+                                </div>
+                                <!--end form-group-->
+                            </div>
+                            <!--end col-md-9-->
+                            <div class="col-md-1 col-sm-1">
+                                <div class="form-group">
+                                    <label class="invisible">.</label>
+                                    <button type="submit"
+                                            title="<?php echo $this->__('Subscribe') ?>"
+                                            class="btn btn-primary width-100">
+                                        <i class="fa fa-chevron-right"></i>
+                                        <span><span><?php echo $this->__('Subscribe') ?></span></span>
+                                    </button>
+                                </div>
+                                <!--end form-group-->
+                            </div>
+                            <!--end col-md-9-->
+                        </div>
+                    </form>
+
+                    <script type="text/javascript">
+                        //<![CDATA[
+                        var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+                        //]]>
+                    </script>
+                    <!--end form-->
+                </div>
+            </div>
+            <div class="background">
+                <div class="background-image">
+                    <img src="assets/img/hero-background-image-01.jpg" alt="">
+                </div>
+                <!--end background-image-->
+            </div>
+            <!--end background-->
+        </div>
+        <!--end box-->
+    </div>
+    <!--end container-->
+</section>

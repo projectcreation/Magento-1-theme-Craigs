@@ -1,0 +1,35 @@
+<?php
+/**
+ * Category left navigation
+ */
+?>
+
+
+<section>
+    <h2><?php echo $this->__('Browse Category') ?></h2>
+    <ul class="sidebar-list list-unstyled">
+
+        <li>
+            <a href="#">Electronics<span>12 000</span></a>
+        </li>
+
+        <?php
+
+        if ( $this->getStoreCategories() ) {
+            echo 'true';
+//            var_dump( $this->getStoreCategories() );
+        } else {
+	        echo 'false';
+        }
+
+        ?>
+
+
+	    <?php foreach ($this->getStoreCategories() as $_category): ?>
+		    <?php if($_category->name!=""):  ?>
+			    <?php echo $this->drawItem($_category) ?>
+		    <?php endif?>
+	    <?php endforeach ?>
+
+    </ul>
+</section>

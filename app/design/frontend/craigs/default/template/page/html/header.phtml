@@ -1,0 +1,97 @@
+<header class="hero">
+    <div class="hero-wrapper">
+        <!--============ Secondary Navigation ===============================================================-->
+        <div class="secondary-navigation">
+            <div class="container">
+                <ul class="left">
+                    <li>
+                        <span><i class="fa fa-phone"></i> +1 123 456 789</span>
+                    </li>
+                </ul>
+                <!--end left-->
+                <ul class="right">
+	                <?php if ($this->helper('customer')->isLoggedIn()): ?>
+                    <li>
+                        <a title="<?php echo $this->__('My Account') ?>" href="<?php echo $this->getUrl('customer/account') ?>">
+                            <i class="fa fa-heart"></i>
+                            <?php echo $this->__('My Account') ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a title="Log Out" href="<?php echo $this->getUrl('customer/account/logout') ?>">
+                            <i class="fa fa-sign-in"></i>
+                            <?php echo $this->__('Logout') ?>
+                        </a>
+                    </li>
+	                <?php else: ?>
+                    <li>
+                        <a href="<?php echo $this->getUrl('customer/account/login/')?>">
+                            <i class="fa fa-sign-in"></i>
+                            <?php echo $this->__('Login') ?>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo $this->getUrl('customer/account/create/')?>">
+                            <i class="fa fa-pencil-square-o"></i>
+                            <?php echo $this->__('Create Account') ?>
+                        </a>
+                    </li>
+	                <?php endif;?>
+                </ul>
+                <!--end right-->
+            </div>
+            <!--end container-->
+        </div>
+        <!--============ End Secondary Navigation ===========================================================-->
+        <!--============ Main Navigation ====================================================================-->
+        <div class="main-navigation">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+                    <!--logo-->
+                    <a class="navbar-brand" href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">
+                        <img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" />
+                    </a>
+                    <!--logo-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbar">
+                        <!--Main navigation list-->
+	                    <?php echo $this->getChildHtml('main_nav_list') ?>
+	                    <?php echo $this->getChildHtml('top_cart') ?>
+                        <!--Main navigation list-->
+                    </div>
+                    <!--end navbar-collapse-->
+                </nav>
+                <!--end navbar-->
+            </div>
+            <!--end container-->
+        </div>
+        <!--============ End Main Navigation ================================================================-->
+        <!--============ Page Title =========================================================================-->
+        <div class="page-title">
+            <div class="container">
+                <h1 class="opacity-40 center">
+<!--                    <a href="#">Buy</a>, <a href="#">Sell</a> or <a href="#">Find</a> What You need-->
+                    <a href="#" class="d-i-block">
+	                    <?php echo $this->getLayout()->getBlock('header')->getWelcome() ?>
+                    </a>
+                </h1>
+
+            </div>
+            <!--end container-->
+        </div>
+        <!--============ End Page Title =====================================================================-->
+        <!--============ Hero Form ==========================================================================-->
+	    <?php echo $this->getChildHtml('topSearch') ?>
+        <!--============ End Hero Form ======================================================================-->
+        <div class="background">
+            <div class="background-image original-size">
+                <img src="assets/img/hero-background-icons.jpg" alt="">
+            </div>
+            <!--end background-image-->
+        </div>
+        <!--end background-->
+    </div>
+    <!--end hero-wrapper-->
+</header>
